@@ -1,0 +1,42 @@
+body{
+	background-image: url(../images/23.jpg); 
+	
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+#curry{
+	width: 200px;
+	height: 200px;
+	float: right;
+
+}
+
+#KD{
+	width: 200px;
+	height: 200px;
+	float: right;
+}
+
+#KY{
+	width: 200px;
+	height: 200px;
+
+}
+
+#lebron{
+	width: 200px;
+	height: 200px;
+}
+#VSS{
+
+	align-content: 50%;
+	font-size: 35px;
+	float: left;
+}
+
+#VS{
+
+	align-content: 50%;
+	font-size: 35px;
+	float: right;
+}

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <title>NBA</title>
+  <meta charset="UTF-8">
+       <meta name="viewpoint" content="width=device-width, initial-scale=1">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta http-equiv="Content-Script-Type" content="text/javascript"
 
-
-	<meta charset="UTF-8">
-	<meta name="viewpoint" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Script-Type" content="text/javascript"
-
-	<title><strong>NBA LEGENDS RPG GAME</strong></strong></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
- 	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/slate/bootstrap.min.css">
- 	<link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
- 	<link rel="stylesheet" type="text/css" href="Assets/css/style.css">
-
-
-</head>
-<body>
-
-   <nav class="navbar navbar-inverse">
+       <title><strong>NBA Finals</strong></strong></title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ 
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ 
+    </head>
+    <body>
+    
+  <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Jose M Rivas</a>
+                <a class="navbar-brand" href="#">Cavs vs Warriors</a>
             </div>
             <ul class="nav navbar-nav">
 
-                <li><a href='index.html' class="active">Lets Play Some NBA Legends RPG!!</a></li>
-                <li><a href="instructions.html">Instructions</a></li>
+                <li><a href='index.html' class="active">Lets Play Some NBA RPG!!</a></li>
+              
             </ul>
         </div>
     </nav>
@@ -37,84 +38,43 @@
             <div class="col-md-12" id="headerRow">
 
             </div>
-        </div>
-        <!-- Main Content Area Row -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="panel panel-default panel-transparent">
-                    <div class="panel-heading">
-                        Choose your Legend
-                    </div>
-                    <!-- This shows the panel body -->
-                    <div class="panel-body" id="characters">
-
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default panel-transparent">
-                    <div class="panel-heading">
-                        Bad Boyz
-                    </div>
-                    <div class="panel-body" id="enemies">
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default panel-transparent">
-                    <div class="panel-heading">
-                        Defense
-                    </div>
-                    <div class="panel-body" id="Defense">
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="panel panel-default panel-transparent">
-                    <div class="panel-heading">
-                        One on One Section
-                    </div>
-                    <div class="panel-body" id="fightSection">
-
-                    </div>
-                    <div class="panel-footer">
-                        <button type="button" id="attack" class="btn btn-primary">Attack!!</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="panel panel-default panel-transparent">
-                    <div class="panel-heading">
-                         Results
-                    </div>
-                    <div class="panel-body" id="battleResults">
-
-                    </div>
-                    <div class="panel-footer"> <span id="overallAvg"></span><a href="index.html"><button type="button" class="btn btn-primary">Restart</button></a></div>
-                </div>
-            </div>
-        </div>
-
+    </div>
+<body>
+  <div class="container" id="main-game-section">
+    <div class="container col-lg-12" id="characters-section">
+      <div class="container section-title">Select Your Character</div>
+    </div>
+    <div class="container col-lg-4" id="selected-character-section">
+      <div class="section-title container"></div>
+      <div id="selected-character"></div>
+    </div>
+     <div class="section-title container col-lg-4">Fight Section
+        <div id="fight-section">
+            <button class="btn" id="attack-button">Attack</button>
+            <div class="jumbotron" id="gameMessage"></div>
+        </div>   
+    </div>  
+    <div id="action">
+      <div class="character-section">
+        <div class="container section-title col-lg-3">
+            <div id="defender"></div>
+        </div>  
+      </div>
+    </div>    
+    <div class="container" id="available-to-attack-section">
+      <div class="section-title"></div>
     </div>
 
-    </div>
+
+<!--     <div class="jumbotron" id="gameMessage"></div>
+ -->
   </div>
-  <div class="panel-footer"> Copyright &copy; 2016 Jose Rivas</div>
-</div>
-
-
-
-    	<script type="text/javascript" src="Assets/javascript/game.js"></script>
-  <!-- jQuery CDN -->
-   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
- 
-   <!-- Bootstrap JavaScript CDN -->
-   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <!-- Latest compiled and minified JavaScript for bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Game logic -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
+
 </html>
